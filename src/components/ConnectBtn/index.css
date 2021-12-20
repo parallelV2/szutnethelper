@@ -1,0 +1,125 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 200px;
+}
+.BtnContainer {
+  position: relative;
+}
+.circle {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 50%;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.15) inset;
+  cursor: pointer;
+  z-index: 5;
+}
+.circle1 {
+  box-shadow: inset 0px 0px 3px -11px #fce2c1;
+  background: linear-gradient(to bottom, #ffc477 5%, #fb9e25 100%);
+  background-color: #ffc477;
+  border: 1px solid #eeb44f;
+  text-shadow: 0px -4px 25px #cc9f52;
+  &:hover {
+    background: linear-gradient(to bottom, #fb9e25 5%, #ffc477 100%);
+    background-color: #fb9e25;
+  }
+}
+.circle2 {
+  /* background-color: #5ba8ff; */
+  box-shadow: inset 0px 0px 3px -11px #bbdaf7;
+  background: linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+  background-color: #79bbff;
+  text-shadow: 0px -4px 25px #528ecc;
+  &:hover {
+    background: linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
+    background-color: #1e62d0;
+  }
+}
+.circle3 {
+  /* background-color: #b85bff; */
+  box-shadow: inset 0px 0px 3px -11px #e184f3;
+  background: linear-gradient(to bottom, #c123de 5%, #a20dbd 100%);
+  background-color: #c123de;
+  text-shadow: 0px -4px 25px #9b14b3;
+  transition: ease-in-out;
+  border: 1px solid #a511c0;
+  &:hover {
+    background: linear-gradient(to bottom, #a20dbd 5%, #c123de 100%);
+    background-color: #a20dbd;
+  }
+}
+/* .circle1::before {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border-radius: 50%;
+  content: "";
+  animation: expand 1.8s ease-out 0.5s infinite;
+  z-index: -5;
+} */
+.wave11 {
+  background-color: #ff8964;
+}
+.wave12 {
+  background-color: #ffa64698;
+}
+.wave13 {
+  background-color: #f3b6a5;
+}
+.wave21 {
+  background-color: #00bfff;
+}
+.wave22 {
+  background-color: #58d4fd9c;
+}
+.wave23 {
+  background-color: #93ebff;
+}
+.waveBase {
+  position: absolute;
+  border-radius: 43%;
+  filter: opacity(0.2);
+  content: "";
+  animation: drift linear 0.5s infinite;
+}
+.waveIn {
+  width: 140px;
+  height: 140px;
+  animation-duration: 6s;
+  z-index: -3;
+}
+.wave {
+  width: 150px;
+  height: 150px;
+  animation-duration: 7s;
+  z-index: -4;
+}
+.waveOut {
+  width: 160px;
+  height: 160px;
+  animation-duration: 8s;
+  z-index: -5;
+}
+.wave32 {
+  background-color: #8758fd;
+}
+.wave31 {
+  background-color: #ff00b3aa;
+}
+.wave33 {
+  background-color: #e0b8ff;
+}
+
+@keyframes drift {
+  from {
+    transform: rotate(360deg);
+  }
+}

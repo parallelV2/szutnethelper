@@ -1,0 +1,67 @@
+{
+  "name": "net-helper",
+  "version": "0.1.0",
+  "scripts": {
+    "reset": "del-cli node_modules",
+    "dev": "modern dev",
+    "build": "modern build",
+    "start": "modern start",
+    "new": "modern new",
+    "lint": "modern lint",
+    "dev:electron": "modern dev electron",
+    "build:electron": "modern build electron"
+  },
+  "engines": {
+    "node": ">=14.17.6"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@modern-js"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "node --max_old_space_size=8192 ./node_modules/eslint/bin/eslint.js --fix --color --cache --quiet",
+      "git add"
+    ],
+    "*.{js,jsx,mjs,mjsx,cjs,cjsx}": [
+      "node --max_old_space_size=8192 ./node_modules/eslint/bin/eslint.js --fix --color --cache --quiet",
+      "git add"
+    ]
+  },
+  "eslintIgnore": [
+    "node_modules/",
+    "dist/"
+  ],
+  "dependencies": {
+    "@modern-js/electron-tools": "^2.0.6",
+    "@modern-js/plugin-less": "^1.1.1",
+    "@modern-js/runtime": "^1.0.0",
+    "antd": "^4.17.4",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "tailwindcss": "^2.2.19"
+  },
+  "devDependencies": {
+    "@babel/register": "^7.15.3",
+    "@babel/runtime": "^7.15.4",
+    "@modern-js/app-tools": "^1.0.0",
+    "@modern-js/plugin-electron": "^1.0.0",
+    "@modern-js/plugin-jarvis": "^1.0.0",
+    "@modern-js/plugin-tailwindcss": "^1.1.2",
+    "@types/node": "^14",
+    "@types/react": "^17",
+    "@types/react-dom": "^17",
+    "del-cli": "^4.0.1",
+    "electron": "^13",
+    "electron-builder": "^22.11.7",
+    "typescript": "^4"
+  },
+  "modernConfig": {},
+  "main": "./electron/main.js"
+}

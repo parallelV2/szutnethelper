@@ -1,0 +1,30 @@
+.InfoBoard {
+  .mask {
+    background: linear-gradient(144deg, #3c9cef 0%, #5f6bfd 100%);
+    box-shadow: 0 4px 8px 0 rgba(190, 195, 199, 0.5);
+    height: 40px;
+    width: 100%;
+  }
+  .mask::after {
+    line-height: 40px;
+    margin-left: 10px;
+    content: "网络信息";
+    color: #fff;
+    font-size: 18px;
+  }
+  &.container {
+    width: 321px;
+    height: 190.2px;
+    position: relative;
+  }
+  .content {
+    width: 100%;
+    height: 150.2px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    .right {
+    }
+  }
+}

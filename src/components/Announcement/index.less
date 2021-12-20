@@ -1,0 +1,32 @@
+.announcement {
+  height: 200px;
+  .myBreadcrumb {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0.5rem;
+    background: linear-gradient(144deg, #3c9cef 0%, #5f6bfd 100%);
+    box-shadow: 0 4px 8px 0 rgba(190, 195, 199, 0.5);
+    height: 40px;
+    width: 100%;
+    .text {
+      font-size: 18px;
+      color: #fff;
+    }
+    .back {
+      color: #fff;
+      position: absolute;
+      right: 15px;
+      font-size: 18px;
+    }
+    .text-flow {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+  .announcementList {
+    height: 160px;
+    overflow-y: scroll;
+  }
+}
